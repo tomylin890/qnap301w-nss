@@ -12,3 +12,6 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+
+# Hide NSS and kiddin9 repo from feeds for avoid failure with the command: opkg…
+sed -i 's/EXCLUDE_FEEDS:=nss_packages/EXCLUDE_FEEDS:=nss_packages kiddin9/g' include/feeds.mk
