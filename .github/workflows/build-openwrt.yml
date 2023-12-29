@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/AgustinLorenzo/openwrt
+  REPO_URL: https://github.com/tomylin890/openwrt-nss-wifi
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
