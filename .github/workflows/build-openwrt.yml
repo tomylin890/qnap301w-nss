@@ -135,5 +135,5 @@ jobs:
         tag: "ipq807x-${{ env.NOW }}"
         generateReleaseNotes: true
         makeLatest: true
-        artifacts: bin/targets/qualcommax/ipq807x/*
+        artifacts: openwrt/bin/targets/qualcommax/ipq807x/*
         token: "${{ secrets.GITHUB_TOKEN }}"
