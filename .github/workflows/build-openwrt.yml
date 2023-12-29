@@ -89,6 +89,18 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
+    - name: QoL fixes on default config
+      run: |
+        mkdir -p files/etc/uci-defaults
+        cat > files/etc/uci-defaults/xxx_config << EOF
+        uci set wireless.radio0.country='US'
+        uci set wireless.radio1.country='US'
+        uci set wireless.radio2.country='US'
+        uci set wireless.radio1.disabled=0
+        uci set wireless.radio2.disabled=0
+        uci commit
+        EOF
+
     - name: Download package
       id: package
       run: |
